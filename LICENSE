@@ -1,0 +1,16 @@
+axhub Scoop Bucket — Manifest Files
+
+Copyright (c) 2026 조코딩 AX 파트너스 (Jocoding AX Partners). All rights reserved.
+
+The JSON manifest files in this repository describe how to install the axhub
+CLI via Scoop on Windows. The manifests are released for the sole purpose of
+enabling installation by users with a valid axhub license.
+
+The axhub binary installed by these manifests is governed by the axhub End
+User License Agreement (Proprietary) distributed alongside the binary.
+
+Redistribution or modification of the manifest files is permitted only to the
+extent necessary to fork and maintain a private bucket. Any such derivative
+must remove all references to "axhub" and "jocodingax" trademarks.
+
+Contact: legal@jocodingax.ai

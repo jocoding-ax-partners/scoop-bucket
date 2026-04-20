@@ -1,0 +1,7 @@
+# CODEOWNERS — scoop-bucket
+*                       @realitsyourman
+
+# Manifest (auto-updated by goreleaser)
+/bucket/                @realitsyourman
+
+# TODO: Add backup owner before Phase 1.
