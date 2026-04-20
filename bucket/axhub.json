@@ -6,14 +6,14 @@
             "bin": [
                 "axhub.exe"
             ],
-            "hash": "a4b8be1b01108a1f61e380deae8ad91992303894b5df0ee182587a80580b89bb"
+            "hash": "d76b2c9d9cb3f7f6b466a73da06e6544bdac9078b9597e04b8934053bde07325"
         },
         "arm64": {
             "url": "https://github.com/jocoding-ax-partners/ax-hub-cli/releases/download/v0.0.1/axhub_0.0.1_windows_arm64.zip",
             "bin": [
                 "axhub.exe"
             ],
-            "hash": "b89a8eba2ee238c23edd37f5bdb4d15257620ed04bbc538aeaa0eb8ff71387ec"
+            "hash": "771cfca0c1b20e1dc93fe1fa5be68c30ced4ef2159aa18fa89b4e79e8fac6d3e"
         }
     },
     "homepage": "https://github.com/jocoding-ax-partners/ax-hub-cli",
