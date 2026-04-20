@@ -1,34 +1,21 @@
 {
-  "version": "0.0.1",
-  "description": "CLI for the axhub developer platform",
-  "homepage": "https://cli.jocodingax.ai",
-  "license": "Proprietary",
-  "architecture": {
-    "64bit": {
-      "url": "https://cli.jocodingax.ai/latest/windows_amd64/axhub.zip",
-      "hash": "0000000000000000000000000000000000000000000000000000000000000000"
-    },
-    "arm64": {
-      "url": "https://cli.jocodingax.ai/latest/windows_arm64/axhub.zip",
-      "hash": "0000000000000000000000000000000000000000000000000000000000000000"
-    }
-  },
-  "bin": "axhub.exe",
-  "checkver": {
-    "url": "https://cli.jocodingax.ai/latest/manifest.json",
-    "jsonpath": "$.version"
-  },
-  "autoupdate": {
+    "version": "0.0.1",
     "architecture": {
-      "64bit": {
-        "url": "https://cli.jocodingax.ai/latest/windows_amd64/axhub.zip"
-      },
-      "arm64": {
-        "url": "https://cli.jocodingax.ai/latest/windows_arm64/axhub.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/jocoding-ax-partners/ax-hub-cli/releases/download/v0.0.1/axhub_0.0.1_windows_amd64.zip",
+            "bin": [
+                "axhub.exe"
+            ],
+            "hash": "a4b8be1b01108a1f61e380deae8ad91992303894b5df0ee182587a80580b89bb"
+        },
+        "arm64": {
+            "url": "https://github.com/jocoding-ax-partners/ax-hub-cli/releases/download/v0.0.1/axhub_0.0.1_windows_arm64.zip",
+            "bin": [
+                "axhub.exe"
+            ],
+            "hash": "b89a8eba2ee238c23edd37f5bdb4d15257620ed04bbc538aeaa0eb8ff71387ec"
+        }
     },
-    "hash": {
-      "url": "https://cli.jocodingax.ai/latest/checksums.txt"
-    }
-  }
+    "homepage": "https://github.com/jocoding-ax-partners/ax-hub-cli",
+    "license": "Proprietary"
 }
