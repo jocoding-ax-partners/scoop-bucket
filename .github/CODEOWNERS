@@ -1,7 +1,5 @@
 # CODEOWNERS — scoop-bucket
+# R13: single owner 2026-04-20 (사용자 결정). future backup 추가 예정.
+
 *                       @realitsyourman
-
-# Manifest (auto-updated by goreleaser)
 /bucket/                @realitsyourman
-
-# TODO: Add backup owner before Phase 1.
