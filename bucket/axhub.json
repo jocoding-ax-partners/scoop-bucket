@@ -5,30 +5,35 @@
   "license": "Proprietary",
   "architecture": {
     "64bit": {
-      "url": "https://cli.jocodingax.ai/latest/windows_amd64/axhub.zip",
-      "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      "url": "https://cli.jocodingax.ai/0.0.1/axhub_0.0.1_windows_amd64.zip",
+      "hash": "68015d161e971e5f4f8d9fe96033aa12a2ab9dfea82c37bdb7106c89016495cf"
     },
     "arm64": {
-      "url": "https://cli.jocodingax.ai/latest/windows_arm64/axhub.zip",
-      "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      "url": "https://cli.jocodingax.ai/0.0.1/axhub_0.0.1_windows_arm64.zip",
+      "hash": "6d69f1c36ec13873fc47f6f0d7d622757f507a41314d18f42eac82d01cd3b169"
     }
   },
   "bin": "axhub.exe",
   "checkver": {
-    "url": "https://cli.jocodingax.ai/latest/manifest.json",
-    "jsonpath": "$.version"
+    "url": "https://cli.jocodingax.ai/version.txt",
+    "regex": "v([\\d.]+)"
   },
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": "https://cli.jocodingax.ai/latest/windows_amd64/axhub.zip"
+        "url": "https://cli.jocodingax.ai/$version/axhub_$version_windows_amd64.zip",
+        "hash": {
+          "url": "https://cli.jocodingax.ai/$version/checksums.txt",
+          "regex": "(?m)^([a-fA-F0-9]{64})\\s+axhub_$version_windows_amd64\\.zip$"
+        }
       },
       "arm64": {
-        "url": "https://cli.jocodingax.ai/latest/windows_arm64/axhub.zip"
+        "url": "https://cli.jocodingax.ai/$version/axhub_$version_windows_arm64.zip",
+        "hash": {
+          "url": "https://cli.jocodingax.ai/$version/checksums.txt",
+          "regex": "(?m)^([a-fA-F0-9]{64})\\s+axhub_$version_windows_arm64\\.zip$"
+        }
       }
-    },
-    "hash": {
-      "url": "https://cli.jocodingax.ai/latest/checksums.txt"
     }
   }
 }

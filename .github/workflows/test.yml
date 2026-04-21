@@ -10,12 +10,44 @@ permissions:
 
 jobs:
   validate:
-    runs-on: [self-hosted, macOS, ARM64]
+    runs-on: [self-hosted, ARM64, Linux]
     steps:
       - uses: actions/checkout@v4
-      - name: Validate JSON manifests
+      - name: Validate manifest JSON + remote artifacts
         run: |
-          for f in bucket/*.json; do
-            echo "Validating $f"
-            /usr/bin/python3 -c "import json; json.load(open('$f'))"
-          done
+          python3 <<'PY'
+          import json
+          import re
+          import urllib.request
+          from pathlib import Path
+
+          manifest = json.loads(Path("bucket/axhub.json").read_text())
+          version = manifest["version"]
+          base = f"https://cli.jocodingax.ai/{version}"
+          checksums_text = urllib.request.urlopen(f"{base}/checksums.txt").read().decode()
+          checksums = {}
+          for line in checksums_text.splitlines():
+            parts = line.split()
+            if len(parts) >= 2:
+              checksums[parts[1]] = parts[0].lower()
+
+          arches = {
+            "64bit": "amd64",
+            "arm64": "arm64",
+          }
+
+          for scoop_arch, asset_arch in arches.items():
+            expected_file = f"axhub_{version}_windows_{asset_arch}.zip"
+            expected_url = f"{base}/{expected_file}"
+            entry = manifest["architecture"][scoop_arch]
+            assert entry["url"] == expected_url, (scoop_arch, entry["url"], expected_url)
+            assert entry["hash"].lower() == checksums[expected_file], (scoop_arch, entry["hash"], checksums[expected_file])
+            with urllib.request.urlopen(entry["url"]) as response:
+              assert response.status == 200, (entry["url"], response.status)
+
+          checkver = manifest["checkver"]
+          assert checkver["url"] == "https://cli.jocodingax.ai/version.txt"
+          version_txt = urllib.request.urlopen(checkver["url"]).read().decode().strip()
+          match = re.search(checkver["regex"], version_txt)
+          assert match and match.group(1) == version, (version_txt, version)
+          PY
