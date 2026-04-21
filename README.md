@@ -15,8 +15,8 @@ scoop install axhub
 
 ## Status
 
-**v0.0.x** — placeholder manifest. Real URLs/hashes are written automatically by
-`goreleaser` on each upstream release tag.
+**v0.0.1** — manifest points at the live CLI CDN artifacts and validates against
+the published release checksums. Future tags remain autoupdate-driven.
 
 ## License
 
