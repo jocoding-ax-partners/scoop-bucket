@@ -15,8 +15,10 @@ scoop install axhub
 
 ## Status
 
-**v0.0.1** — manifest points at the live CLI CDN artifacts and validates against
-the published release checksums. Future tags remain autoupdate-driven.
+The checked-in manifest currently targets **0.1.0** assets from
+`https://cli.jocodingax.ai/0.1.0/`, while `checkver` and `autoupdate` continue
+to follow `https://cli.jocodingax.ai/version.txt` and the published release
+checksums for future tags.
 
 ## License
 
