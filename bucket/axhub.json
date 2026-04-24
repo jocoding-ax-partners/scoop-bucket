@@ -1,44 +1,21 @@
 {
-  "version": "0.1.4",
-  "description": "CLI for the axhub developer platform",
-  "homepage": "https://github.com/jocoding-ax-partners/ax-hub-cli",
-  "license": "Proprietary",
-  "architecture": {
-    "64bit": {
-      "url": "https://cli.jocodingax.ai/0.1.4/axhub_0.1.4_windows_amd64.zip",
-      "bin": [
-        "axhub.exe"
-      ],
-      "hash": "a08eb600ef9e0dc6602040f66ef4b35314586867993a5f790305d2cdfeec8668"
-    },
-    "arm64": {
-      "url": "https://cli.jocodingax.ai/0.1.4/axhub_0.1.4_windows_arm64.zip",
-      "bin": [
-        "axhub.exe"
-      ],
-      "hash": "13f9c1d292a2ea50426805f4a61b155e1bf1bd0e482a3a590f0be6375ebf161e"
-    }
-  },
-  "checkver": {
-    "url": "https://cli.jocodingax.ai/version.txt",
-    "regex": "v([\\d.]+)"
-  },
-  "autoupdate": {
+    "version": "0.1.6",
     "architecture": {
-      "64bit": {
-        "url": "https://cli.jocodingax.ai/$version/axhub_$version_windows_amd64.zip",
-        "hash": {
-          "url": "https://cli.jocodingax.ai/$version/checksums.txt",
-          "regex": "(?m)^([a-fA-F0-9]{64})\\s+axhub_$version_windows_amd64\\.zip$"
+        "64bit": {
+            "url": "https://cli.jocodingax.ai/0.1.6/axhub_0.1.6_windows_amd64.zip",
+            "bin": [
+                "axhub.exe"
+            ],
+            "hash": "ddbf46990d73ab72681d2f638622093ec542115c6e7d144de43306877c6fb370"
+        },
+        "arm64": {
+            "url": "https://cli.jocodingax.ai/0.1.6/axhub_0.1.6_windows_arm64.zip",
+            "bin": [
+                "axhub.exe"
+            ],
+            "hash": "ac82c20725a8faa4a203a9958fd770c9d60be888bd7c0b6bb49c26e6e68da610"
         }
-      },
-      "arm64": {
-        "url": "https://cli.jocodingax.ai/$version/axhub_$version_windows_arm64.zip",
-        "hash": {
-          "url": "https://cli.jocodingax.ai/$version/checksums.txt",
-          "regex": "(?m)^([a-fA-F0-9]{64})\\s+axhub_$version_windows_arm64\\.zip$"
-        }
-      }
-    }
-  }
+    },
+    "homepage": "https://github.com/jocoding-ax-partners/ax-hub-cli",
+    "license": "Proprietary"
 }
