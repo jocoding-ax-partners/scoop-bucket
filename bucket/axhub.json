@@ -1,21 +1,44 @@
 {
-    "version": "0.1.6",
-    "architecture": {
-        "64bit": {
-            "url": "https://cli.jocodingax.ai/0.1.6/axhub_0.1.6_windows_amd64.zip",
-            "bin": [
-                "axhub.exe"
-            ],
-            "hash": "ddbf46990d73ab72681d2f638622093ec542115c6e7d144de43306877c6fb370"
-        },
-        "arm64": {
-            "url": "https://cli.jocodingax.ai/0.1.6/axhub_0.1.6_windows_arm64.zip",
-            "bin": [
-                "axhub.exe"
-            ],
-            "hash": "ac82c20725a8faa4a203a9958fd770c9d60be888bd7c0b6bb49c26e6e68da610"
-        }
+  "version": "0.1.6",
+  "architecture": {
+    "64bit": {
+      "url": "https://cli.jocodingax.ai/0.1.6/axhub_0.1.6_windows_amd64.zip",
+      "bin": [
+        "axhub.exe"
+      ],
+      "hash": "ddbf46990d73ab72681d2f638622093ec542115c6e7d144de43306877c6fb370"
     },
-    "homepage": "https://github.com/jocoding-ax-partners/ax-hub-cli",
-    "license": "Proprietary"
+    "arm64": {
+      "url": "https://cli.jocodingax.ai/0.1.6/axhub_0.1.6_windows_arm64.zip",
+      "bin": [
+        "axhub.exe"
+      ],
+      "hash": "ac82c20725a8faa4a203a9958fd770c9d60be888bd7c0b6bb49c26e6e68da610"
+    }
+  },
+  "homepage": "https://github.com/jocoding-ax-partners/ax-hub-cli",
+  "license": "Proprietary",
+  "description": "CLI for the axhub developer platform",
+  "checkver": {
+    "url": "https://cli.jocodingax.ai/version.txt",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://cli.jocodingax.ai/$version/axhub_$version_windows_amd64.zip",
+        "hash": {
+          "url": "https://cli.jocodingax.ai/$version/checksums.txt",
+          "regex": "(?m)^([a-fA-F0-9]{64})\\s+axhub_$version_windows_amd64\\.zip$"
+        }
+      },
+      "arm64": {
+        "url": "https://cli.jocodingax.ai/$version/axhub_$version_windows_arm64.zip",
+        "hash": {
+          "url": "https://cli.jocodingax.ai/$version/checksums.txt",
+          "regex": "(?m)^([a-fA-F0-9]{64})\\s+axhub_$version_windows_arm64\\.zip$"
+        }
+      }
+    }
+  }
 }
