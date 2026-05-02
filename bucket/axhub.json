@@ -1,19 +1,19 @@
 {
-  "version": "0.10.1",
+  "version": "0.10.2",
   "architecture": {
     "64bit": {
-      "url": "https://cli.jocodingax.ai/0.10.1/axhub_0.10.1_windows_amd64.zip",
+      "url": "https://cli.jocodingax.ai/0.10.2/axhub_0.10.2_windows_amd64.zip",
       "bin": [
         "axhub.exe"
       ],
-      "hash": "89538a4fe2e53efe699e0ebb8c34516e75c331803c28106730afd308eac65834"
+      "hash": "0e6a75dc9f2ccb49ba0aa3c4dedc39ba3206dbfd43ee7ca7598cf40367ef6a45"
     },
     "arm64": {
-      "url": "https://cli.jocodingax.ai/0.10.1/axhub_0.10.1_windows_arm64.zip",
+      "url": "https://cli.jocodingax.ai/0.10.2/axhub_0.10.2_windows_arm64.zip",
       "bin": [
         "axhub.exe"
       ],
-      "hash": "b4edd2aef84185b29b843916fa7447ad54540ff4f9bc3b920adb4f9bff3e2785"
+      "hash": "a14f45fa2f085f25f48111e2ad0b8d785b9d226f9cdce0614c5b16a74896c3cd"
     }
   },
   "homepage": "https://github.com/jocoding-ax-partners/ax-hub-cli",
